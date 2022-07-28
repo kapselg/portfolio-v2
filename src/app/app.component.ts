@@ -1,10 +1,35 @@
-import { Component } from '@angular/core';
+import {
+  animate,
+  state,
+  style,
+  transition,
+  trigger,
+} from '@angular/animations';
+import {
+  AfterViewInit,
+  ChangeDetectorRef,
+  Component,
+  ElementRef,
+  Host,
+  HostListener,
+  Input,
+  OnInit,
+  ViewChild,
+} from '@angular/core';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.scss']
+  styleUrls: ['./app.component.css'],
 })
-export class AppComponent {
-  title = 'portfolio-v2';
+export class AppComponent implements AfterViewInit {
+  constructor(private cd: ChangeDetectorRef) {}
+
+  site: string = '';
+  hexHeight: string = '';
+
+  ngAfterViewInit() {}
+
+  @HostListener('window:resize')
+  onResize() {}
 }
