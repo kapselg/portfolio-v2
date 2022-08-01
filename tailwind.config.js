@@ -13,10 +13,10 @@ module.exports = {
   theme: {
     extend: {
       colors: {
-        granat: "#121927",
-        szar: "#3D4454",
-        lod: "#B8BED2",
-        au: "#D8A31A",
+        'granat': "#121927",
+        'szar': "#3D4454",
+        'lod': "#B8BED2",
+        'au': "#D8A31A",
       },
 
     },

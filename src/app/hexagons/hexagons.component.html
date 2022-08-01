@@ -3,61 +3,58 @@
   <div
     class="absolute w-0 top-0 transition-all border-b-transparent border-l-transparent border-r-transparent lg:border-l-[35vw]  lg:border-r-[35vw] z-10 border-l-[50vw] border-r-[50vw]"
     [ngClass]="{
-      'transition-all delay-100 duration-300 border-t-[20vh]': this.site !== '',
+      'transition-all delay-50 duration-300 border-t-[20vh]': this.site !== '',
       'border-t-au': this.site === 'about',
       'border-t-lod': this.site === 'projects',
-      'border-t-szar': this.site === 'other'
+      'border-t-szar': this.site === 'activities'
     }">
 
   </div>
 
-  <button (click)="this.site = ''" [ngClass]="{
+  <button routerLink="/" [ngClass]="{
     'opacity-100 transition-all delay-200 duration-200': this.site !== '',
+    'opacity-0': this.site === '',
     'text-au': this.site === 'about',
     'text-lod': this.site === 'projects',
-    'text-gray-400': this.site === 'other'
-  }" class="opacity-0 aboslute px-8 py-2 -translate-y-24 rounded-full bg-gray-800 ring ring-black z-10">Back</button>
+    'text-gray-400': this.site === 'activities'
+  }" class="aboslute px-6 py-2 -translate-y-24 rounded-full bg-gray-800 z-30 no-tap">BACK</button>
 
-  <svg viewBox="0 0 30 30" (click)="this.site = this.site === 'about' ? '' : 'about'" [ngClass]="{'translate-y-[-42.5vh] translate-x-0 scale-125 pointer-events-none hover:fill-transparent z-10': this.site === 'about',
-  '-translate-y-[45%] hexa-shadow fill-au': this.site === '',
-  'opacity-0 text-transparent': this.site !== '' && this.site !== 'about'}" class="text-xl max-w-[60vw] max-h-[35vh] absolute -translate-y-[45%] transition-all fill-transparent cursor-pointer text-[22%]
-  hover:scale-90 hover:fill-white hover:hexa-shadow-hover hover:transition-all" #hexagon [@show-1]>
+  <svg viewBox="0 0 20 23" routerLink="about" [ngClass]="{
+  'translate-y-[-42.5vh] translate-x-0 scale-125 z-10 fill-transparent': this.site === 'about',
+  '-translate-y-[45%] hexa-shadow hover:fill-white hover:scale-90 hover:hexa-shadow-hover hover:transition-all fill-au ': this.site === '',
+  'opacity-0 text-transparent pointer-events-none': this.site !== '' && this.site !== 'about'}"
+  class="absolute text-xl max-w-[50vw] max-h-[28vh] -translate-y-[45%] duration-300 transition-all cursor-pointer text-[22%] no-tap z-20"  #hexagon [@show-1]>
     <path
-      d="M 14.732419801 2.887325 Q 15 2.734 15.267580199 2.887325 L 25.435627766 8.713675 Q 25.703207965 8.867 25.703207965 9.17365 L 25.703207965 20.82635 Q 25.703207965 21.133 25.435627766 21.286325 L 15.267580199 27.112675 Q 15 27.266 14.732419801 27.112675 L 4.564372234 21.286325 Q 4.296792035 21.133 4.296792035 20.82635 L 4.296792035 9.17365 Q 4.296792035 8.867 4.564372234 8.713675 Z"
+      d="M 9.750000117 0.14375 Q 10 0 10.249999883 0.14375 L 19.749995454 5.60625 Q 19.999995337 5.75 19.999995337 6.0375 L 19.999995337 16.9625 Q 19.999995337 17.25 19.749995454 17.39375 L 10.249999883 22.85625 Q 10 23 9.750000117 22.85625 L 0.250004546 17.39375 Q 0.000004663 17.25 0.000004663 16.9625 L 0.000004663 6.0375 Q 0.000004663 5.75 0.250004546 5.60625 Z"
       data-bx-shape="n-gon 10.703 12.266 12.359 12.266 6 0 1@43079380"></path>
-    <text style="text-anchor: middle;" dominant-baseline="middle" class="fill-black capitalize" x="15" y="15">about
+    <text style="text-anchor: middle;" dominant-baseline="middle" class="fill-black capitalize " x="9.995" y="12.06">about
       me</text>
   </svg>
 
-  <svg viewBox="0 0 30 30" fill="none" (click)="this.site = this.site === 'projects' ? '' : 'projects'" [ngClass]="{'translate-y-[-42.5vh] translate-x-0 scale-125 pointer-events-none hover:fill-transparent z-10': this.site === 'projects',
-  '-translate-x-[38%] translate-y-[20%] hexa-shadow fill-lod': this.site === '',
-  'opacity-0 text-transparent': this.site !== '' && this.site !== 'projects'}" class="absolute text-xl max-w-[60vw] max-h-[35vh] duration-300 transition-all fill-transparent cursor-pointer text-[22%]
-    hover:scale-90 hover:fill-white hover:hexa-shadow-hover" [@show-2]>
-    <!--  -->
+  <svg viewBox="0 0 20 23" fill="none" routerLink="projects" [ngClass]="{'translate-y-[-42.5vh] translate-x-0 scale-125 hover:fill-transparent z-10': this.site === 'projects',
+  '-translate-x-[55%] translate-y-[35%] hexa-shadow fill-lod hover:fill-white hover:scale-90  hover:hexa-shadow-hover': this.site === '',
+  'opacity-0 text-transparent pointer-events-none': this.site !== '' && this.site !== 'projects'}"
+  class="absolute text-xl max-w-[50vw] max-h-[28vh] duration-300 transition-all fill-transparent cursor-pointer text-[22%] no-tap z-20" [@show-2]>
     <path
-      d="M 14.732419801 2.887325 Q 15 2.734 15.267580199 2.887325 L 25.435627766 8.713675 Q 25.703207965 8.867 25.703207965 9.17365 L 25.703207965 20.82635 Q 25.703207965 21.133 25.435627766 21.286325 L 15.267580199 27.112675 Q 15 27.266 14.732419801 27.112675 L 4.564372234 21.286325 Q 4.296792035 21.133 4.296792035 20.82635 L 4.296792035 9.17365 Q 4.296792035 8.867 4.564372234 8.713675 Z"
-      data-bx-shape="n-gon 15 15 12.359 12.266 6 0 1@267927e7" class="pointer-events-none"></path>
-    <text style="text-anchor: middle;" dominant-baseline="middle" class="fill-black capitalize pointer-events-none"
-      x="15" y="15">my projects</text>
-
+      d="M 9.750000117 0.14375 Q 10 0 10.249999883 0.14375 L 19.749995454 5.60625 Q 19.999995337 5.75 19.999995337 6.0375 L 19.999995337 16.9625 Q 19.999995337 17.25 19.749995454 17.39375 L 10.249999883 22.85625 Q 10 23 9.750000117 22.85625 L 0.250004546 17.39375 Q 0.000004663 17.25 0.000004663 16.9625 L 0.000004663 6.0375 Q 0.000004663 5.75 0.250004546 5.60625 Z"
+      data-bx-shape="n-gon 10.703 12.266 12.359 12.266 6 0 1@43079380"></path>
+    <text style="text-anchor: middle;" dominant-baseline="middle" class="fill-black capitalize " x="9.995" y="12.06">about
+      me</text>
   </svg>
 
-  <svg viewBox="0 0 30 30" (click)="this.site = this.site === 'other' ? '' : 'other'" [ngClass]="{'translate-y-[-42.5vh] translate-x-0 scale-125 pointer-events-none hover:fill-transparent z-10': this.site === 'other',
-  'translate-x-[38%] translate-y-[20%] hexa-shadow fill-szar': this.site === '',
-  'opacity-0 text-transparent': this.site !== '' && this.site !== 'other'}" class="max-w-[60vw] max-h-[35vh] transition-all cursor-pointer  absolute fill-transparent text-[20%]
-    hover:scale-90 hover:fill-white hover:hexa-shadow-hover" [@show-3]>
-    <path
-      d="M 14.732419801 2.887325 Q 15 2.734 15.267580199 2.887325 L 25.435627766 8.713675 Q 25.703207965 8.867 25.703207965 9.17365 L 25.703207965 20.82635 Q 25.703207965 21.133 25.435627766 21.286325 L 15.267580199 27.112675 Q 15 27.266 14.732419801 27.112675 L 4.564372234 21.286325 Q 4.296792035 21.133 4.296792035 20.82635 L 4.296792035 9.17365 Q 4.296792035 8.867 4.564372234 8.713675 Z"
-      data-bx-shape="n-gon 10.703 12.266 12.359 12.266 6 0 1@43079380" class="shadow-xl shadow-white ">
-    </path>
-    <text style="text-anchor: middle;" dominant-baseline="middle" class="fill-black" x="15" y="15">
-
-      <tspan x="15" y="45%">My Other</tspan>
-      <tspan x="15" y="55%">Activities</tspan>
-    </text>
+  <svg viewBox="0 0 20 23" routerLink="activities" [ngClass]="
+  {'translate-y-[-42.5vh] translate-x-0 scale-125 hover:fill-transparent z-10': this.site === 'activities',
+  'translate-x-[55%] translate-y-[35%] hexa-shadow fill-szar hover:fill-white hover:scale-90  hover:hexa-shadow-hover': this.site === '',
+  'opacity-0 text-transparent pointer-events-none': this.site !== '' && this.site !== 'activities'}"
+  class="max-w-[50vw] max-h-[28vh] transition-all cursor-pointer  absolute fill-transparent text-[20%] no-tap z-20" [@show-3]>
+  <path
+  d="M 9.750000117 0.14375 Q 10 0 10.249999883 0.14375 L 19.749995454 5.60625 Q 19.999995337 5.75 19.999995337 6.0375 L 19.999995337 16.9625 Q 19.999995337 17.25 19.749995454 17.39375 L 10.249999883 22.85625 Q 10 23 9.750000117 22.85625 L 0.250004546 17.39375 Q 0.000004663 17.25 0.000004663 16.9625 L 0.000004663 6.0375 Q 0.000004663 5.75 0.250004546 5.60625 Z"
+  data-bx-shape="n-gon 10.703 12.266 12.359 12.266 6 0 1@43079380"></path>
+<text style="text-anchor: middle;" dominant-baseline="middle" class="fill-black capitalize " x="9.995" y="12.06"><tspan x="9.995" y="42%">My other</tspan>
+  <tspan x="9.995" y="58%">Activities</tspan></text>
   </svg>
 
-  <div class="absolute w-screen bg-black" *ngIf="this.site !== ''">
+  <div class="absolute w-screen h-[80vh] mt-[22vh] z-10">
     <router-outlet></router-outlet>
   </div>
 
@@ -65,5 +62,6 @@
     © Wojciech Duda <small>2022</small>
     <div class="w-0 h-[1px] bg-white m-auto mt-1 transition-all group-hover:w-full"></div>
   </div>
+
 
 </div>
