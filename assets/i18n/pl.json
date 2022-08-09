@@ -1,0 +1,23 @@
+{
+  "menu": {
+    "about_me": "O mnie",
+    "back": "Wstecz",
+    "my_other": "Moje inne",
+    "activities": "aktywności",
+    "projects": "Projekty"
+  },
+  "about": {
+    "h1": "Witaj! Nazywam się Wojciech Duda",
+    "h2": "Jestem Angular Web Developerem",
+    "desc1": "Moją pasją jest tworzenie projektów od podstaw. Nie bojąc się wyzwań jestem gotowy rozwiązać wszelkie problemy i trudności na drodze do sukcesu. Lubię pracować w grupie kreatywnych ludzi, ale nie mam nic przeciwko pracy w pojedynkę.",
+    "desc2": "Mam nadzieję, że będę świetnym dodatkiem do twojego zespołu.",
+    "tools": "Narzędzia, których lubię używać:"
+  },
+  "other": {
+    "h1": "Moje wykształcenie",
+    "h2": "Pozostała działalność"
+  },
+  "projects": {
+    "h1": "Projekty, nad którymi pracowałem"
+  }
+}
