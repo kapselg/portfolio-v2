@@ -11,6 +11,10 @@ module.exports = {
   },
   darkMode: false, // or 'media' or 'class'
   theme: {
+    fontFamily: {
+      'display': 'Lalezar, cursive',
+      'body': 'Source Sans Pro, sans-serif'
+    },
     extend: {
       colors: {
         'granat': "#121927",
@@ -18,7 +22,6 @@ module.exports = {
         'lod': "#B8BED2",
         'au': "#D8A31A",
       },
-
     },
   },
   variants: {

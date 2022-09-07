@@ -1,0 +1,41 @@
+<div class="hexa-shadow lg:flex-1 flex-none flex-wrap min-h-full max-w-[80vw] mx-auto mb-10">
+
+  <div class="flex flex-wrap basis-full mb-5">
+    <div class="lg:basis-5/12 basis-full lg:mb-0 mb-5">
+      <img [src]="project.thumbnail.url" [alt]="project.thumbnail.alt"
+        (click)="this.lightboxService.toggleLighbox(project.thumbnail.url)" class="lg:max-w-full max-w-[80%] mx-auto pointer-events-auto">
+    </div>
+
+    <article class="py-1 lg:px-10 lg:basis-7/12 basis-full text-justify">
+      <h1 class="text-3xl font-display text-white">
+        {{project.name}}
+      </h1>
+      <p class="text-lod whitespace-pre-line leading-5">
+        {{project.description}}
+      </p>
+    </article>
+  </div>
+
+  <div class="basis-full flex justify-center" *ngIf="project.buttons">
+    <div *ngFor="let button of project.buttons" class="pointer-events-auto">
+      <a class="bg-au text-gray-900 px-6 py-2 transition-all rounded-2xl h-auto w-auto font-display text-xl cursor-pointer duration-200 hover:text-shadow"
+        [href]="button.url" target="_blank" type="button">{{button.label}}</a>
+    </div>
+  </div>
+  <ul
+    class="flex flex-wrap basis-full justify-evenly mt-4 text-md lg:text-lg [&>li]:text-center [&>li]:mb-4 [&>li>p]:text-2xl text-white"
+    *ngIf="this.project.started || this.project.ended">
+    <li *ngIf="this.project.started">
+      <fa-icon [icon]="this.startIco"></fa-icon>
+      <br>
+      <small>Started</small>
+      <p>{{ this.project.started | date }}</p>
+    </li>
+    <li *ngIf="this.project.ended">
+      <fa-icon [icon]="this.endIco"></fa-icon>
+      <br>
+      <small>Ended</small>
+      <p>NgRx</p>
+    </li>
+  </ul>
+</div>

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { faCake } from '@fortawesome/free-solid-svg-icons';
+import { faAt, faCake, faMap, faPhone, faStarOfLife } from '@fortawesome/free-solid-svg-icons';
 
 @Component({
   selector: 'app-about',
@@ -13,6 +13,18 @@ export class AboutComponent implements OnInit {
   ngOnInit(): void {
   }
 
-  faAngular = faCake;
+  interests: [
+    'Angular 14',
+    'RxJs',
+    'NgRx',
+    'Bootstrap 5',
+    'Tailwind CSS'
+  ]
+
+  cakeIco = faCake;
+  phoneIco = faPhone;
+  mailIco = faAt;
+  addressIco = faMap;
+  starIco = faStarOfLife;
 
 }

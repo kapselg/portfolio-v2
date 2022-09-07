@@ -1,1 +1,18 @@
-<p>other works!</p>
+<div class="lg:w-2/3  lg:mx-auto mx-3 flex-1 flex-wrap mt-16 rounded h-screen">
+  <h1 class="basis-full text-center text-5xl font-display hexa-shadow mb-10 text-white">{{'other.h1' | translate}}</h1>
+  <div class="basis-full">
+
+    <app-card *ngFor="let project of this.education" [project]="project"></app-card>
+
+    <div class="h-10 w-full"></div>
+
+
+  <h1 class="basis-full text-center text-5xl font-display hexa-shadow mb-10 text-white">{{'other.h2' | translate}}</h1>
+  <div class="basis-full">
+
+    <app-card *ngFor="let project of this.activities" [project]="project"></app-card>
+
+    <div class="h-10 w-full"></div>
+</div>
+
+

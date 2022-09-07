@@ -1,20 +1,67 @@
-<div class="w-11/12 h-full mx-auto bg-gray-400 flex">
-  <div class="flex flex-wrap content-start justify-center basis-1/3">
-    <img src="/assets/placeholder.jpeg" class="aspect-square object-cover rounded-full h-60 w-auto hexa-shadow m-5">
+<div class="lg:w-2/3 w-full mx-auto flex text-white pointer-events-none pt-16 flex-wrap lg:flex-nowrap lg:mt-0">
+  <div
+  class="flex flex-wrap lg:w-1/2 font-display hexa-shadow content-start
+  basis-full">
+    <img src="assets/placeholder.jpeg" class="rounded-full hexa-shadow w-40 h-40 mx-auto">
+    <div class="basis-full flex justify-center">
+      <ul class="w-auto inline-block
+      [&>li]:my-3 [&>li]:text-center [&>li]:flex [&>li]:items-center [&>li>fa-icon]:mr-4 [&>li>a]:ml-auto lg:[&>li>a]:text-xl">
+        <li>
+          <fa-icon [icon]="this.cakeIco" size="2x"></fa-icon>
+          <a>10th May 2003</a>
+        </li>
+        <li class="pointer-events-auto">
+          <fa-icon [icon]="this.phoneIco" size="2x"></fa-icon>
+          <a href="tel:+48123456789">123 456 789</a>
+        </li>
+        <li class="pointer-events-auto">
+          <fa-icon [icon]="this.mailIco" size="2x"></fa-icon>
+          <a href="mailto:test@mail.com">test@mail.com</a>
+        </li>
+      </ul>
+    </div>
+
 
   </div>
   <br>
-  <div class="bg-red-100 basis-2/3">
-    <ul class="flex items-start w-full grow p-3">
-      <li class="flex h-20 grow">
-        <img class="h-full" src="/assets/angular.svg" />
-        <div class="grow ml-5 flex flex-wrap content-center text-xl">
-          <fa-icon [icon]="faAngular"></fa-icon>
-          <div class="w-8/12 bg-gray-900 h-5 rounded-l-md rounded-r-3xl"></div>
+  <div class="rounded grow">
+    <div class="flex lg:w-full mx-8 flex-col">
+      <article class="basis-full text-justify [&>p]:pb-1 text-lg md:mx-28 lg:mx-0">
+        <div class="mb-4 text-au text-3xl text-center font-display">
+          <h2 class="hexa-shadow mb-3">{{ 'about.h1' | translate }}</h2>
+          <h2 class="hexa-shadow">{{ 'about.h2' | translate }}</h2>
         </div>
-      </li>
-      <li></li>
-      <li></li>
-    </ul>
+
+        <p class="hexa-shadow">
+          {{'about.desc1' | translate}}
+        </p>
+        <p class="hexa-shadow">
+          {{'about.desc2' | translate}}
+        </p>
+      </article>
+      <article class="basis-full mt-8 mb-4 hexa-shadow text-au text-3xl text-center font-display">
+        <h2>{{'about.tools' | translate}}</h2>
+      </article>
+      <ul class="flex flex-wrap basis-full mb-8 text-md lg:text-lg [&>li]:text-center [&>li]:flex [&>li]:basis-1/2 [&>li]:mb-4 [&>li>p]:ml-3 [&>li>p]:text-shadow">
+        <li>
+          <fa-icon [icon]="this.starIco"></fa-icon>
+          <p>Angular&nbsp;14</p>
+        </li>
+        <li>
+          <fa-icon [icon]="this.starIco"></fa-icon>
+          <p>NgRx</p>
+        </li>
+        <li>
+          <fa-icon [icon]="this.starIco"></fa-icon>
+          <p>RxJs</p>
+        </li>
+        <li>
+          <fa-icon [icon]="this.starIco"></fa-icon>
+          <p>Tailwind&nbsp;CSS</p>
+        </li>
+      </ul>
+    </div>
+
   </div>
 </div>
+<div class="h-10 w-full"></div>

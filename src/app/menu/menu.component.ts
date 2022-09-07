@@ -7,12 +7,12 @@ import {
 } from '@angular/animations';
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { debounceTime, distinctUntilChanged, map, take } from 'rxjs';
+import { debounceTime, map, take } from 'rxjs';
+import { TextsService } from '../shared/texts.service';
 
 @Component({
-  selector: 'app-hexagons',
-  templateUrl: './hexagons.component.html',
-  styleUrls: ['./hexagons.component.css'],
+  selector: 'app-menu',
+  templateUrl: './menu.component.html',
   animations: [
     trigger('show-1', [
       transition('void => *', [
@@ -49,8 +49,8 @@ import { debounceTime, distinctUntilChanged, map, take } from 'rxjs';
     ]),
   ],
 })
-export class HexagonsComponent implements OnInit {
-  constructor(private route: ActivatedRoute, private router: Router) {}
+export class MenuComponent implements OnInit {
+  constructor(private route: ActivatedRoute, private router: Router, private textsService: TextsService) {}
 
   site = '';
 
@@ -59,6 +59,10 @@ export class HexagonsComponent implements OnInit {
     this.router.events.pipe(debounceTime(10)).subscribe(() => {
       this.checkUrl();
     });
+  }
+
+  changeLanguage(lang: 'en' | 'pl'){
+    this.textsService.language = lang;
   }
 
   checkUrl() {

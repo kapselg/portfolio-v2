@@ -1,0 +1,81 @@
+<div class="bg-gray-900 h-screen grid place-items-center items-center relative overflow-x-hidden font-display">
+
+  <div
+    class="absolute w-0 top-0 transition-all border-b-transparent border-l-transparent border-r-transparent lg:border-l-[35vw]  lg:border-r-[35vw] z-10 border-l-[50vw] border-r-[50vw] hexa-shadow"
+    [ngClass]="{
+      'transition-all duration-300 border-t-[9rem]': this.site !== '',
+      'border-t-au': this.site === 'about',
+      'border-t-lod': this.site === 'projects',
+      'border-t-szar': this.site === 'activities'
+    }">
+
+  </div>
+
+  <button routerLink="/" [ngClass]="{
+    'opacity-100 transition-all delay-200 duration-200': this.site !== '',
+    'opacity-0': this.site === '',
+    'text-au': this.site === 'about',
+    'text-lod': this.site === 'projects',
+    'text-gray-400': this.site === 'activities'
+  }" class="absolute px-6 py-2 top-[9.2rem] rounded-full bg-gray-800 z-30 no-tap hexa-shadow">{{'menu.back' | translate }}</button>
+
+  <svg viewBox="0 0 20 23" routerLink="about" [ngClass]="{
+  'translate-y-[-43.5vh] translate-x-0 scale-125 z-10 fill-transparent': this.site === 'about',
+  '-translate-y-[45%] hexa-shadow hover:fill-white hover:scale-90 hover:hexa-shadow-hover hover:transition-all fill-au': this.site === '',
+  'opacity-0 text-transparent pointer-events-none': this.site !== '' && this.site !== 'about'}"
+    class="absolute text-xl max-w-[45vw] max-h-[28vh] -translate-y-[45%] duration-300 transition-all cursor-pointer text-[22%] no-tap z-20"
+    #hexagon [@show-1]>
+    <path
+      d="M 9.750000117 0.14375 Q 10 0 10.249999883 0.14375 L 19.749995454 5.60625 Q 19.999995337 5.75 19.999995337 6.0375 L 19.999995337 16.9625 Q 19.999995337 17.25 19.749995454 17.39375 L 10.249999883 22.85625 Q 10 23 9.750000117 22.85625 L 0.250004546 17.39375 Q 0.000004663 17.25 0.000004663 16.9625 L 0.000004663 6.0375 Q 0.000004663 5.75 0.250004546 5.60625 Z"
+      data-bx-shape="n-gon 10.703 12.266 12.359 12.266 6 0 1@43079380"></path>
+    <text style="text-anchor: middle;" dominant-baseline="middle" class="fill-black " x="9.995"
+      y="12.06">{{ 'menu.about_me' | translate }}</text>
+  </svg>
+
+  <svg viewBox="0 0 20 23" fill="none" routerLink="projects" [ngClass]="{'translate-y-[-43.5vh] translate-x-0 scale-125 hover:fill-transparent z-10': this.site === 'projects',
+  '-translate-x-[55%] translate-y-[35%] hexa-shadow fill-lod hover:fill-white hover:scale-90  hover:hexa-shadow-hover': this.site === '',
+  'opacity-0 text-transparent pointer-events-none': this.site !== '' && this.site !== 'projects'}"
+    class="absolute text-xl max-w-[45vw] max-h-[28vh] duration-300 transition-all fill-transparent cursor-pointer text-[22%] no-tap z-20"
+    [@show-2]>
+    <path
+      d="M 9.750000117 0.14375 Q 10 0 10.249999883 0.14375 L 19.749995454 5.60625 Q 19.999995337 5.75 19.999995337 6.0375 L 19.999995337 16.9625 Q 19.999995337 17.25 19.749995454 17.39375 L 10.249999883 22.85625 Q 10 23 9.750000117 22.85625 L 0.250004546 17.39375 Q 0.000004663 17.25 0.000004663 16.9625 L 0.000004663 6.0375 Q 0.000004663 5.75 0.250004546 5.60625 Z"
+      data-bx-shape="n-gon 10.703 12.266 12.359 12.266 6 0 1@43079380"></path>
+    <text style="text-anchor: middle;" dominant-baseline="middle" class="fill-black " x="9.995"
+      y="12.06">{{'menu.projects' | translate }}</text>
+  </svg>
+
+  <svg viewBox="0 0 20 23" routerLink="activities" [ngClass]="
+  {'translate-y-[-43.5vh] translate-x-0 scale-125 hover:fill-transparent z-10': this.site === 'activities',
+  'translate-x-[55%] translate-y-[35%] hexa-shadow fill-szar hover:fill-white hover:scale-90  hover:hexa-shadow-hover': this.site === '',
+  'opacity-0 text-transparent pointer-events-none': this.site !== '' && this.site !== 'activities'}"
+    class="max-w-[45vw] max-h-[28vh] transition-all cursor-pointer  absolute fill-transparent text-[20%] no-tap z-20"
+    [@show-3]>
+    <path
+      d="M 9.750000117 0.14375 Q 10 0 10.249999883 0.14375 L 19.749995454 5.60625 Q 19.999995337 5.75 19.999995337 6.0375 L 19.999995337 16.9625 Q 19.999995337 17.25 19.749995454 17.39375 L 10.249999883 22.85625 Q 10 23 9.750000117 22.85625 L 0.250004546 17.39375 Q 0.000004663 17.25 0.000004663 16.9625 L 0.000004663 6.0375 Q 0.000004663 5.75 0.250004546 5.60625 Z"
+      data-bx-shape="n-gon 10.703 12.266 12.359 12.266 6 0 1@43079380"></path>
+    <text style="text-anchor: middle;" dominant-baseline="middle" class="fill-black " x="9.995" y="12.06">
+      <tspan x="9.995" y="42%">{{'menu.my_other' | translate }}</tspan>
+      <tspan x="9.995" y="58%">{{'menu.activities' | translate }}</tspan>
+    </text>
+  </svg>
+
+
+  <div class="absolute top-0 left-0 w-screen mt-[11rem] grid font-body">
+    <router-outlet></router-outlet>
+  </div>
+
+  <div class="group fixed right-5 bottom-0 p-2 text-xl text-white cursor-pointer z-10">
+    © Wojciech Duda <small>2022</small>
+    <div class="w-0 h-[1px] bg-white m-auto pt-1 transition-all group-hover:w-full"></div>
+  </div>
+
+  <div class="fixed top-2 right-2 flex z-50 transition-all duration-[150] gap-2" [ngClass]="{'opacity-100': this.site === '', 'opacity-0': this.site !== ''}">
+    <button class="w-10" (click)="this.changeLanguage('en')">
+      <img src="assets/gb.svg" alt="english language switch">
+    </button>
+    <button value="pl" class="w-10" (click)="this.changeLanguage('pl')">
+      <img src="assets/pl.svg" alt="polish language switch">
+    </button>
+  </div>
+
+</div>

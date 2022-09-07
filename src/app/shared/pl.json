@@ -1,0 +1,72 @@
+{
+  "activities": [
+    {
+      "buttons": [
+        {
+          "label": "Demo",
+          "url": "https://kapselg.github.io/polyform-front/"
+        }
+      ],
+      "description": "Opis",
+      "name": "Erasumus w Irlandii",
+      "thumbnail": {
+        "alt": "Zrzut ekranu przedstawiający stronę główną projektu Polyform",
+        "url": "https://i.ibb.co/dMCFQFy/wto-02-08-2022-18-33.png"
+      }
+    },
+    {
+      "buttons": [
+        {
+          "label": "Demo",
+          "url": "https://kapselg.github.io/polyform-front/"
+        }
+      ],
+      "description": "Opis",
+      "name": "PolyForm",
+      "thumbnail": {
+        "alt": "Zrzut ekranu przedstawiający stronę główną projektu Polyform",
+        "url": "https://i.ibb.co/dMCFQFy/wto-02-08-2022-18-33.png"
+      }
+    }
+  ],
+  "education": [
+    {
+      "description": "Obecnie uczęszczam do technikum na kierunku technik informatyk.\n\nDzięki projektom realizowanym w mojej szkole miałem okazję odwiedzić Irlandię w celu podjęcia działań związanych z projektowaniem, tworzeniem i zarządzaniem stronami internetowymi.",
+      "name": "ZST Wodzisław",
+      "thumbnail": {
+        "alt": "Zrzut ekranu przedstawiający stronę główną projektu Polyform",
+        "url": "https://upload.wikimedia.org/wikipedia/commons/0/04/Zespol_szkol_technicznych_wodzislaw_slaski2.jpg"
+      }
+    }
+  ],
+  "projects": [
+    {
+      "buttons": [
+        {
+          "label": "Demo",
+          "url": "https://kapselg.github.io/polyform-front/"
+        }
+      ],
+      "description": "Opis",
+      "name": "PoluForm",
+      "thumbnail": {
+        "alt": "Zrzut ekranu przedstawiający stronę główną projektu Polyform",
+        "url": "https://i.ibb.co/dMCFQFy/wto-02-08-2022-18-33.png"
+      }
+    },
+    {
+      "buttons": [
+        {
+          "label": "Demo",
+          "url": "https://kapselg.github.io/polyform-front/"
+        }
+      ],
+      "description": "Opis",
+      "name": "Poliforma",
+      "thumbnail": {
+        "alt": "Zrzut ekranu przedstawiający stronę główną projektu Polyform",
+        "url": "https://i.ibb.co/dMCFQFy/wto-02-08-2022-18-33.png"
+      }
+    }
+  ]
+}

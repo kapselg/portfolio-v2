@@ -1,0 +1,23 @@
+{
+  "menu": {
+    "about_me": "About Me",
+    "back": "Back",
+    "my_other": "My other",
+    "activities": "activities",
+    "projects": "Projects"
+  },
+  "about": {
+    "h1": "Hello! My name is Wojciech Duda",
+    "h2": "I am an Angular Web Developer",
+    "desc1": "My passion is creating projects from scratch. Not afraid of challanges I am ready to solve any problems and difficulties on my way to success. I like working in a group of creative people, but I have nothing against working alone.",
+    "desc2": "I hope to be a fine addition to your team.",
+    "tools": "Tools I like to use:"
+  },
+  "other": {
+    "h1": "My education",
+    "h2": "Other activities"
+  },
+  "projects": {
+    "h1": "Projects I worked on"
+  }
+}

@@ -1,29 +1,22 @@
 import {
-  animate,
-  state,
-  style,
-  transition,
-  trigger,
-} from '@angular/animations';
-import {
-  AfterViewInit,
-  ChangeDetectorRef,
   Component,
-  ElementRef,
-  Host,
-  HostListener,
-  Input,
   OnInit,
-  ViewChild,
 } from '@angular/core';
+import { TranslateService } from '@ngx-translate/core';
+import { environment } from 'src/environments/environment';
+import { TextsService } from './shared/texts.service';
 
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.css'],
 })
-export class AppComponent  {
-  constructor() {}
+export class AppComponent implements OnInit  {
+  constructor(private textsService: TextsService) {}
+
+  ngOnInit(){
+    this.textsService.initLanguage();
+  }
 
   site: string = '';
 
